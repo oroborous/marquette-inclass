@@ -15,6 +15,12 @@ public class Individual {
     public Individual() {
         representation = new ArrayList<>();
         representation.add((random.nextFloat() * 9) - 4);
+        representation.add((random.nextFloat() * 9) - 4);
+    }
+
+    public Individual(Individual original) {
+        this();
+        representation.addAll(original.representation);
     }
 
     public void mutate() {
@@ -32,5 +38,9 @@ public class Individual {
         float x1 = representation.get(1);
         return (100 - 2*10*((Math.pow(x0, 2) - 10 * Math.cos(2 * Math.PI * x0))
                 + (Math.pow(x1, 2) - 10 * Math.cos(2 * Math.PI * x1))));
+    }
+
+    public String toString() {
+        return String.format("(%.3f, %.3f)", representation.get(0),representation.get(1));
     }
 }

@@ -41,6 +41,6 @@ public class Individual {
     }
 
     public String toString() {
-        return String.format("(%.3f, %.3f)", representation.get(0),representation.get(1));
+        return String.format("(%f, %f)", representation.get(0),representation.get(1));
     }
 }

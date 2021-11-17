@@ -1,5 +1,7 @@
 package com.javapuppy;
 
+import java.util.Random;
+
 public class EvolutionaryAlgorithm {
     private Population population;
     private int maxGenerations;
